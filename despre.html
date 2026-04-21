@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despre noi - ThermoConstruct</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: #222;
+        }
+
+        /* HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-size: 38px;
+            font-weight: 600;
+        }
+
+        .logo .thermo { color: #000; }
+        .logo .construct { color: #8F8D8D; }
+
+        nav a {
+            font-size: 18px;
+            margin: 0 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: black;
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .btn {
+            background: #444;
+            color: white;
+            padding: 14px 26px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        .btn:hover {
+            background: #000;
+        }
+
+        /* TITLU */
+        .page-title {
+            text-align: center;
+            padding: 70px 20px 20px;
+        }
+
+        .page-title h1 {
+            font-size: 36px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .page-title p {
+            color: #666;
+        }
+
+        /* INTRO */
+        .section {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            padding: 80px;
+        }
+
+        .section-text {
+            width: 50%;
+        }
+
+        .section-text p {
+            text-align: justify;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        .section img {
+            width: 50%;
+            border-radius: 12px;
+        }
+
+        /* IMAGINE MICĂ + TEXT PARALLEL */
+        .split-section {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            padding: 80px;
+        }
+
+        .split-section img {
+            width: 35%;
+            border-radius: 12px;
+        }
+
+        .split-text {
+            width: 65%;
+            text-align: justify;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        /* PROCES */
+        .process {
+            padding: 80px;
+            text-align: center;
+        }
+
+        .process h2 {
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .process-box {
+            padding: 30px;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .process-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .process-box span {
+            font-size: 24px;
+            font-weight: 600;
+            color: #888;
+        }
+
+        .process-box h3 {
+            margin-top: 10px;
+        }
+
+        .process-box p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* FOOTER */
+        .footer-bottom {
+            text-align: center;
+            font-size: 11px;
+            color: #999;
+            padding: 25px 0;
+            border-top: 1px solid #eee;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .section,
+            .split-section {
+                flex-direction: column;
+            }
+
+            .section img,
+            .split-section img,
+            .section-text,
+            .split-text {
+                width: 100%;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <span class="thermo">Thermo</span><span class="construct">Construct</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Acasă</a>
+        <a href="despre.html">Despre noi</a>
+        <a href="servicii.html">Servicii</a>
+        <a href="galerie.html">Galerie</a>
+    </nav>
+
+    <a href="index.html#contact" class="btn">Contact</a>
+</header>
+
+<!-- TITLU -->
+<div class="page-title">
+    <h1>Despre noi</h1>
+    <p>Profesionalism, calitate și soluții moderne de izolație</p>
+</div>
+
+<!-- INTRO -->
+<div class="section">
+    <div class="section-text">
+        <p>
+            ThermoConstruct este o companie specializată în realizarea de izolații profesionale cu spumă poliuretanică,
+            utilizând atât spumă cu celulă deschisă, cât și spumă cu celulă închisă.
+        </p>
+        <p>
+            Punem accent pe calitate, profesionalism și atenție la detalii, oferind soluții eficiente și durabile.
+        </p>
+    </div>
+
+    <img src="imagine-despre1.jpg">
+</div>
+
+<!-- IMAGINE MICĂ + TEXT LÂNGĂ -->
+<div class="split-section">
+    <img src="imagine-despre2.jpg">
+
+    <div class="split-text">
+        <p>
+            Prin seriozitate, experiență și atenție la detalii, ThermoConstruct își propune să devină un partener de încredere
+            pentru orice proiect de izolație, oferind soluții eficiente și durabile pe termen lung.
+        </p>
+    </div>
+</div>
+
+<!-- PROCES -->
+<div class="process">
+    <h2>Procesul de lucru</h2>
+
+    <div class="process-grid">
+
+        <div class="process-box">
+            <span>01</span>
+            <h3>Consultanță</h3>
+            <p>Analizăm proiectul și alegem soluția optimă.</p>
+        </div>
+
+        <div class="process-box">
+            <span>02</span>
+            <h3>Planificare</h3>
+            <p>Organizăm fiecare etapă pentru eficiență maximă.</p>
+        </div>
+
+        <div class="process-box">
+            <span>03</span>
+            <h3>Execuție</h3>
+            <p>Aplicăm spuma poliuretanică cu echipamente profesionale.</p>
+        </div>
+
+        <div class="process-box">
+            <span>04</span>
+            <h3>Verificare</h3>
+            <p>Ne asigurăm că lucrarea este realizată la cele mai înalte standarde de calitate.</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer-bottom">
+    © 2026 ThermoConstruct. Toate drepturile rezervate.
+</div>
+
+</body>
+</html>
